@@ -1,0 +1,18 @@
+#ignore webtalk things
+webtalk
+
+#ignore logfiles
+*.log
+
+#ignore RemoteSystemsTempFiles
+RemoteSystemsTempFiles
+
+#ignore SDK files
+.metadata
+
+#ignore object files
+*.o
+
+#ignore created files
+Debug
+Release
