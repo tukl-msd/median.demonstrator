@@ -1,0 +1,6 @@
+[submodule "kernel/linux-xlnx"]
+	path = kernel/linux-xlnx
+	url = git@github.com:tukl-msd/median.demonstrator.linux-xlnx.git
+[submodule "u-boot/u-boot-xlnx"]
+	path = u-boot/u-boot-xlnx
+	url = git@github.com:tukl-msd/median.demonstrator.u-boot-xlnx.git
