@@ -11,4 +11,4 @@ puts $bitstream_out
 set bitstream_out [file normalize $bitstream_out]
 puts $bitstream_out
 file copy -force ${bitstream_in}.bit $bitstream_out
-file copy -force ${bitstream_in}.bin $bitstream_out
+

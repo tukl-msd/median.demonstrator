@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="20" Path="/home/jfeldmann/median.demonstrator/zynqberry_minimal/Work/zynqberry_minimal.xpr">
+<Project Version="7" Minor="20" Path="/home/johannes/median.demonstrator/zynqberry_minimal/Work/zynqberry_minimal.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="29ad138e3e05494c834eb5b2d8a80181"/>
@@ -17,7 +17,7 @@
     <Option Name="CompiledLibDirRiviera" Val="$PCACHEDIR/compile_simlib/riviera"/>
     <Option Name="CompiledLibDirActivehdl" Val="$PCACHEDIR/compile_simlib/activehdl"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
-    <Option Name="BoardPart" Val="trenz.biz:te0726_m:part0:3.1"/>
+    <Option Name="BoardPart" Val=""/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
@@ -140,9 +140,7 @@
     </Run>
     <Run Id="ZynqberryMinimalDesign_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMinimalDesign_processing_system7_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMinimalDesign_processing_system7_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMinimalDesign_processing_system7_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -160,9 +158,7 @@
         <Step Id="phys_opt_design"/>
         <Step Id="route_design"/>
         <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream" PostStepTclHook="$PPRDIR/../Scripts/tcl_post_bitstream.tcl">
-          <Option Id="BinFile">1</Option>
-        </Step>
+        <Step Id="write_bitstream" PostStepTclHook="$PPRDIR/../Scripts/tcl_post_bitstream.tcl"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy/>
@@ -170,9 +166,7 @@
     </Run>
     <Run Id="ZynqberryMinimalDesign_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMinimalDesign_processing_system7_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMinimalDesign_processing_system7_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

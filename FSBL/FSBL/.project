@@ -4,6 +4,7 @@
 	<comment>Created by SDK v2017.2. FSBL_bsp - ps7_cortexa9_0</comment>
 	<projects>
 		<project>FSBL_bsp</project>
+		<project>ZynqberryMinimalDesign_wrapper</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>
@@ -27,7 +28,7 @@
 		<link>
 			<name>src/ps7_init.c</name>
 			<type>1</type>
-			<locationURI>WORKSPACE_LOC/ZynqberryMinimalDesign_wrapper_hw_platform_0/ps7_init.c</locationURI>
+			<locationURI>WORKSPACE_LOC/ZynqberryMinimalDesign_wrapper/ps7_init.c</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

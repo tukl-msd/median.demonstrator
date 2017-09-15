@@ -1,8 +1,8 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
---Date        : Fri Sep  1 20:00:56 2017
---Host        : localhost.localdomain running 64-bit unknown
+--Date        : Sun Sep 10 20:44:37 2017
+--Host        : CentOSVivado running 64-bit unknown
 --Command     : generate_target ZynqberryMinimalDesign.bd
 --Design      : ZynqberryMinimalDesign
 --Purpose     : IP block netlist

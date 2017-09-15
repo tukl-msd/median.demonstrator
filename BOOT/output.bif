@@ -1,0 +1,7 @@
+//arch = zynq; split = false; format = BIN
+the_ROM_image:
+{
+	[bootloader]/home/johannes/median.demonstrator/FSBL/FSBL.elf
+	/home/johannes/median.demonstrator/zynqberry_minimal/Output/ZynqberryMinimalDesign_wrapper.bit
+	/home/johannes/median.demonstrator/u-boot/u-boot.elf
+}

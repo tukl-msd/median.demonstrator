@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ZynqberryMinimalDesign_wrapper_hw_platform_0</name>
+	<name>ZynqberryMinimalDesign_wrapper</name>
 	<comment>Created by SDK v2017.2</comment>
 	<projects>
 	</projects>
@@ -11,7 +11,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1504368721478</id>
+			<id>1505073440428</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -20,7 +20,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1504368721480</id>
+			<id>1505073440428</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -29,7 +29,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1504368721483</id>
+			<id>1505073440429</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
