@@ -12,3 +12,12 @@ set bitstream_out [file normalize $bitstream_out]
 puts $bitstream_out
 file copy -force ${bitstream_in}.bit $bitstream_out
 
+set filename $bitstream_out/output.bif
+set fileId [open $filename "w"]
+puts $fileId "the_ROM_image:"
+puts $fileId "{"
+puts $fileId \t$bitstream_out/$top.bit
+puts $fileId "}"
+close $fileId
+
+exec bootgen -image $bitstream_out/output.bif -arch zynq -w -process_bitstream bin
