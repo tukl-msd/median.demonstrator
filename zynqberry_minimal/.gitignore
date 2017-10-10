@@ -14,3 +14,5 @@ RTL/*/*
 RTL/*/hdl/*
 !RTL/*/hdl/*.vhd
 
+#Ignore all bif files which are dynamically created inside ouput/
+Output/*.bif
