@@ -1,0 +1,18 @@
+# Ignore all temporary files inside the work directory
+Work/*
+# But not the project file
+!Work/*.xpr
+!Work/.keep
+
+# No files
+*.lock
+
+#Only some Design files - the rest can be ignored
+RTL/*/*
+!RTL/*/*.bd
+!RTL/*/hdl
+RTL/*/hdl/*
+!RTL/*/hdl/*.vhd
+
+#Ignore all bif files which are dynamically created inside ouput/
+Output/*.bif

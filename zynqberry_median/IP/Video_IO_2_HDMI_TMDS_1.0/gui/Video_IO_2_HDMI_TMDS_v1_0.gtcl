@@ -1,0 +1,2 @@
+# This file is automatically written.  Do not modify.
+proc gen_USERPARAMETER_C_VIDEO_MODE_ENABLEMENT {C_INT_CLOCKING } {expr $C_INT_CLOCKING == true}
