@@ -1,0 +1,13 @@
+# No logs
+
+*.log
+.vivado_hls_log_all.xml
+
+# No Synth, Impl or Csim products
+
+solution1/impl
+solution1/syn
+solution1/csim
+
+solution1/.autopilot
+
