@@ -1,12 +1,51 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
---Date        : Fri Nov  3 14:20:14 2017
+--Date        : Thu Nov  9 16:44:17 2017
 --Host        : CentOSVivado running 64-bit unknown
 --Command     : generate_target ZynqberryMedianDesign.bd
 --Design      : ZynqberryMedianDesign
 --Purpose     : IP block netlist
 ----------------------------------------------------------------------------------
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+library UNISIM;
+use UNISIM.VCOMPONENTS.ALL;
+entity INSERT_FILTER_HERE_imp_1O5KWGG is
+  port (
+    ap_clk : in STD_LOGIC;
+    ap_rst_n : in STD_LOGIC;
+    stream_in_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    stream_in_tlast : in STD_LOGIC;
+    stream_in_tready : out STD_LOGIC;
+    stream_in_tuser : in STD_LOGIC;
+    stream_in_tvalid : in STD_LOGIC;
+    stream_out_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    stream_out_tlast : out STD_LOGIC;
+    stream_out_tready : in STD_LOGIC;
+    stream_out_tuser : out STD_LOGIC;
+    stream_out_tvalid : out STD_LOGIC
+  );
+end INSERT_FILTER_HERE_imp_1O5KWGG;
+
+architecture STRUCTURE of INSERT_FILTER_HERE_imp_1O5KWGG is
+  signal stream_in_1_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal stream_in_1_TLAST : STD_LOGIC;
+  signal stream_in_1_TREADY : STD_LOGIC;
+  signal stream_in_1_TUSER : STD_LOGIC;
+  signal stream_in_1_TVALID : STD_LOGIC;
+begin
+  stream_in_1_TDATA(23 downto 0) <= stream_in_tdata(23 downto 0);
+  stream_in_1_TLAST <= stream_in_tlast;
+  stream_in_1_TREADY <= stream_out_tready;
+  stream_in_1_TUSER <= stream_in_tuser;
+  stream_in_1_TVALID <= stream_in_tvalid;
+  stream_in_tready <= stream_in_1_TREADY;
+  stream_out_tdata(23 downto 0) <= stream_in_1_TDATA(23 downto 0);
+  stream_out_tlast <= stream_in_1_TLAST;
+  stream_out_tuser <= stream_in_1_TUSER;
+  stream_out_tvalid <= stream_in_1_TVALID;
+end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
@@ -1628,7 +1667,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ZynqberryMedianDesign_axi_interconnect_0_1 is
+entity ZynqberryMedianDesign_axi_interconnect_0_0 is
   port (
     ACLK : in STD_LOGIC;
     ARESETN : in STD_LOGIC;
@@ -1671,9 +1710,9 @@ entity ZynqberryMedianDesign_axi_interconnect_0_1 is
     S00_AXI_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     S00_AXI_wvalid : in STD_LOGIC
   );
-end ZynqberryMedianDesign_axi_interconnect_0_1;
+end ZynqberryMedianDesign_axi_interconnect_0_0;
 
-architecture STRUCTURE of ZynqberryMedianDesign_axi_interconnect_0_1 is
+architecture STRUCTURE of ZynqberryMedianDesign_axi_interconnect_0_0 is
   signal S00_ACLK_1 : STD_LOGIC;
   signal S00_ARESETN_1 : STD_LOGIC;
   signal axi_interconnect_0_ACLK_net : STD_LOGIC;
@@ -1942,7 +1981,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ZynqberryMedianDesign_ps7_0_axi_periph_0 is
+entity ZynqberryMedianDesign_ps7_0_axi_periph_video_in_0 is
   port (
     ACLK : in STD_LOGIC;
     ARESETN : in STD_LOGIC;
@@ -2024,10 +2063,10 @@ entity ZynqberryMedianDesign_ps7_0_axi_periph_0 is
     S00_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S00_AXI_wvalid : in STD_LOGIC
   );
-end ZynqberryMedianDesign_ps7_0_axi_periph_0;
+end ZynqberryMedianDesign_ps7_0_axi_periph_video_in_0;
 
-architecture STRUCTURE of ZynqberryMedianDesign_ps7_0_axi_periph_0 is
-  component ZynqberryMedianDesign_xbar_1 is
+architecture STRUCTURE of ZynqberryMedianDesign_ps7_0_axi_periph_video_in_0 is
+  component ZynqberryMedianDesign_xbar_0 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -2070,7 +2109,7 @@ architecture STRUCTURE of ZynqberryMedianDesign_ps7_0_axi_periph_0 is
     m_axi_rvalid : in STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axi_rready : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  end component ZynqberryMedianDesign_xbar_1;
+  end component ZynqberryMedianDesign_xbar_0;
   signal M00_ACLK_1 : STD_LOGIC;
   signal M00_ARESETN_1 : STD_LOGIC;
   signal M01_ACLK_1 : STD_LOGIC;
@@ -2429,7 +2468,7 @@ s00_couplers: entity work.s00_couplers_imp_1FANLWQ
       S_AXI_wstrb(3 downto 0) => ps7_0_axi_periph_video_in_to_s00_couplers_WSTRB(3 downto 0),
       S_AXI_wvalid => ps7_0_axi_periph_video_in_to_s00_couplers_WVALID
     );
-xbar: component ZynqberryMedianDesign_xbar_1
+xbar: component ZynqberryMedianDesign_xbar_0
      port map (
       aclk => ps7_0_axi_periph_video_in_ACLK_net,
       aresetn => ps7_0_axi_periph_video_in_ARESETN_net,
@@ -2494,7 +2533,7 @@ library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
-entity ZynqberryMedianDesign_ps7_0_axi_periph_1_0 is
+entity ZynqberryMedianDesign_ps7_0_axi_periph_video_out_0 is
   port (
     ACLK : in STD_LOGIC;
     ARESETN : in STD_LOGIC;
@@ -2595,10 +2634,10 @@ entity ZynqberryMedianDesign_ps7_0_axi_periph_1_0 is
     S00_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S00_AXI_wvalid : in STD_LOGIC
   );
-end ZynqberryMedianDesign_ps7_0_axi_periph_1_0;
+end ZynqberryMedianDesign_ps7_0_axi_periph_video_out_0;
 
-architecture STRUCTURE of ZynqberryMedianDesign_ps7_0_axi_periph_1_0 is
-  component ZynqberryMedianDesign_xbar_0 is
+architecture STRUCTURE of ZynqberryMedianDesign_ps7_0_axi_periph_video_out_0 is
+  component ZynqberryMedianDesign_xbar_1 is
   port (
     aclk : in STD_LOGIC;
     aresetn : in STD_LOGIC;
@@ -2641,7 +2680,7 @@ architecture STRUCTURE of ZynqberryMedianDesign_ps7_0_axi_periph_1_0 is
     m_axi_rvalid : in STD_LOGIC_VECTOR ( 2 downto 0 );
     m_axi_rready : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  end component ZynqberryMedianDesign_xbar_0;
+  end component ZynqberryMedianDesign_xbar_1;
   signal M00_ACLK_1 : STD_LOGIC;
   signal M00_ARESETN_1 : STD_LOGIC;
   signal M01_ACLK_1 : STD_LOGIC;
@@ -3096,7 +3135,7 @@ s00_couplers: entity work.s00_couplers_imp_1G81YRW
       S_AXI_wstrb(3 downto 0) => ps7_0_axi_periph_video_out_to_s00_couplers_WSTRB(3 downto 0),
       S_AXI_wvalid => ps7_0_axi_periph_video_out_to_s00_couplers_WVALID
     );
-xbar: component ZynqberryMedianDesign_xbar_0
+xbar: component ZynqberryMedianDesign_xbar_1
      port map (
       aclk => ps7_0_axi_periph_video_out_ACLK_net,
       aresetn => ps7_0_axi_periph_video_out_ARESETN_net,
@@ -3252,7 +3291,7 @@ entity VideoIn_imp_1CPRT79 is
 end VideoIn_imp_1CPRT79;
 
 architecture STRUCTURE of VideoIn_imp_1CPRT79 is
-  component ZynqberryMedianDesign_axi_vdma_0_1 is
+  component ZynqberryMedianDesign_axi_vdma_0_0 is
   port (
     s_axi_lite_aclk : in STD_LOGIC;
     m_axi_s2mm_aclk : in STD_LOGIC;
@@ -3299,7 +3338,7 @@ architecture STRUCTURE of VideoIn_imp_1CPRT79 is
     s_axis_s2mm_tlast : in STD_LOGIC;
     s2mm_introut : out STD_LOGIC
   );
-  end component ZynqberryMedianDesign_axi_vdma_0_1;
+  end component ZynqberryMedianDesign_axi_vdma_0_0;
   component ZynqberryMedianDesign_csi2_d_phy_rx_0_0 is
   port (
     in_delay_clk : in STD_LOGIC;
@@ -3775,7 +3814,7 @@ begin
   ext_reset_in_1 <= ext_reset_in;
   in_delay_clk_1 <= in_delay_clk;
   s2mm_introut <= axi_vdma_0_s2mm_introut;
-axi_interconnect_0: entity work.ZynqberryMedianDesign_axi_interconnect_0_1
+axi_interconnect_0: entity work.ZynqberryMedianDesign_axi_interconnect_0_0
      port map (
       ACLK => S00_ACLK_1,
       ARESETN => ARESETN_1,
@@ -3818,7 +3857,7 @@ axi_interconnect_0: entity work.ZynqberryMedianDesign_axi_interconnect_0_1
       S00_AXI_wstrb(7 downto 0) => axi_vdma_0_M_AXI_S2MM_WSTRB(7 downto 0),
       S00_AXI_wvalid => axi_vdma_0_M_AXI_S2MM_WVALID
     );
-axi_vdma_0: component ZynqberryMedianDesign_axi_vdma_0_1
+axi_vdma_0: component ZynqberryMedianDesign_axi_vdma_0_0
      port map (
       axi_resetn => M00_ARESETN_1,
       m_axi_s2mm_aclk => S00_ACLK_1,
@@ -4029,7 +4068,7 @@ proc_sys_reset_0: component ZynqberryMedianDesign_proc_sys_reset_0_0
       peripheral_reset(0) => NLW_proc_sys_reset_0_peripheral_reset_UNCONNECTED(0),
       slowest_sync_clk => csi2_d_phy_rx_0_rxbyteclkhs
     );
-ps7_0_axi_periph_video_in: entity work.ZynqberryMedianDesign_ps7_0_axi_periph_0
+ps7_0_axi_periph_video_in: entity work.ZynqberryMedianDesign_ps7_0_axi_periph_video_in_0
      port map (
       ACLK => S00_ACLK_1,
       ARESETN => ARESETN_1,
@@ -4224,13 +4263,23 @@ entity VideoOut_imp_MT3ZYE is
     mm2s_introut : out STD_LOGIC;
     overflow : out STD_LOGIC;
     underflow : out STD_LOGIC;
+    video_in_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    video_in_tlast : in STD_LOGIC;
+    video_in_tready : out STD_LOGIC;
+    video_in_tuser : in STD_LOGIC;
+    video_in_tvalid : in STD_LOGIC;
+    video_out_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    video_out_tlast : out STD_LOGIC;
+    video_out_tready : in STD_LOGIC;
+    video_out_tuser : out STD_LOGIC;
+    video_out_tvalid : out STD_LOGIC;
     vsync_out : out STD_LOGIC;
     vtg_ce : out STD_LOGIC
   );
 end VideoOut_imp_MT3ZYE;
 
 architecture STRUCTURE of VideoOut_imp_MT3ZYE is
-  component ZynqberryMedianDesign_axi_vdma_0_0 is
+  component ZynqberryMedianDesign_axi_vdma_0_1 is
   port (
     s_axi_lite_aclk : in STD_LOGIC;
     m_axi_mm2s_aclk : in STD_LOGIC;
@@ -4274,7 +4323,7 @@ architecture STRUCTURE of VideoOut_imp_MT3ZYE is
     m_axis_mm2s_tlast : out STD_LOGIC;
     mm2s_introut : out STD_LOGIC
   );
-  end component ZynqberryMedianDesign_axi_vdma_0_0;
+  end component ZynqberryMedianDesign_axi_vdma_0_1;
   component ZynqberryMedianDesign_clk_wiz_0_0 is
   port (
     s_axi_aclk : in STD_LOGIC;
@@ -4460,6 +4509,16 @@ architecture STRUCTURE of VideoOut_imp_MT3ZYE is
   signal Conn2_WREADY : STD_LOGIC;
   signal Conn2_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal Conn2_WVALID : STD_LOGIC;
+  signal Conn3_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal Conn3_TLAST : STD_LOGIC;
+  signal Conn3_TREADY : STD_LOGIC;
+  signal Conn3_TUSER : STD_LOGIC;
+  signal Conn3_TVALID : STD_LOGIC;
+  signal Conn4_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal Conn4_TLAST : STD_LOGIC;
+  signal Conn4_TREADY : STD_LOGIC;
+  signal Conn4_TUSER : STD_LOGIC;
+  signal Conn4_TVALID : STD_LOGIC;
   signal S00_ARESETN_1 : STD_LOGIC;
   signal Video_IO_2_HDMI_TMDS_0_hdmi_clk_n : STD_LOGIC;
   signal Video_IO_2_HDMI_TMDS_0_hdmi_clk_p : STD_LOGIC;
@@ -4484,11 +4543,6 @@ architecture STRUCTURE of VideoOut_imp_MT3ZYE is
   signal axi_vdma_0_M_AXI_MM2S_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_vdma_0_M_AXI_MM2S_RVALID : STD_LOGIC;
   signal axi_vdma_0_mm2s_introut : STD_LOGIC;
-  signal axis_fb_conv_0_video_out_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal axis_fb_conv_0_video_out_TLAST : STD_LOGIC;
-  signal axis_fb_conv_0_video_out_TREADY : STD_LOGIC;
-  signal axis_fb_conv_0_video_out_TUSER : STD_LOGIC;
-  signal axis_fb_conv_0_video_out_TVALID : STD_LOGIC;
   signal clk_in1_1 : STD_LOGIC;
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal clk_wiz_0_clk_out2 : STD_LOGIC;
@@ -4599,6 +4653,11 @@ begin
   Conn2_WLAST <= S00_AXI_wlast;
   Conn2_WSTRB(3 downto 0) <= S00_AXI_wstrb(3 downto 0);
   Conn2_WVALID <= S00_AXI_wvalid;
+  Conn3_TDATA(23 downto 0) <= video_in_tdata(23 downto 0);
+  Conn3_TLAST <= video_in_tlast;
+  Conn3_TUSER <= video_in_tuser;
+  Conn3_TVALID <= video_in_tvalid;
+  Conn4_TREADY <= video_out_tready;
   M00_AXI_araddr(31 downto 0) <= Conn1_ARADDR(31 downto 0);
   M00_AXI_arburst(1 downto 0) <= Conn1_ARBURST(1 downto 0);
   M00_AXI_arcache(3 downto 0) <= Conn1_ARCACHE(3 downto 0);
@@ -4633,6 +4692,11 @@ begin
   mm2s_introut <= axi_vdma_0_mm2s_introut;
   overflow <= v_axi4s_vid_out_0_overflow;
   underflow <= v_axi4s_vid_out_0_underflow;
+  video_in_tready <= Conn3_TREADY;
+  video_out_tdata(23 downto 0) <= Conn4_TDATA(23 downto 0);
+  video_out_tlast <= Conn4_TLAST;
+  video_out_tuser <= Conn4_TUSER;
+  video_out_tvalid <= Conn4_TVALID;
   vsync_out <= v_tc_0_vsync_out;
   vtg_ce <= v_axi4s_vid_out_0_vtg_ce;
 Video_IO_2_HDMI_TMDS_0: component ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0
@@ -4688,7 +4752,7 @@ axi_mem_intercon: entity work.ZynqberryMedianDesign_axi_mem_intercon_0
       S00_AXI_rresp(1 downto 0) => axi_vdma_0_M_AXI_MM2S_RRESP(1 downto 0),
       S00_AXI_rvalid => axi_vdma_0_M_AXI_MM2S_RVALID
     );
-axi_vdma_0: component ZynqberryMedianDesign_axi_vdma_0_0
+axi_vdma_0: component ZynqberryMedianDesign_axi_vdma_0_1
      port map (
       axi_resetn => S00_ARESETN_1,
       m_axi_mm2s_aclk => ACLK_1,
@@ -4741,11 +4805,11 @@ axis_fb_conv_0: component ZynqberryMedianDesign_axis_fb_conv_0_0
       s_axis_tready => axi_vdma_0_M_AXIS_MM2S_TREADY,
       s_axis_tuser => axi_vdma_0_M_AXIS_MM2S_TUSER(0),
       s_axis_tvalid => axi_vdma_0_M_AXIS_MM2S_TVALID,
-      video_out_tdata(23 downto 0) => axis_fb_conv_0_video_out_TDATA(23 downto 0),
-      video_out_tlast => axis_fb_conv_0_video_out_TLAST,
-      video_out_tready => axis_fb_conv_0_video_out_TREADY,
-      video_out_tuser => axis_fb_conv_0_video_out_TUSER,
-      video_out_tvalid => axis_fb_conv_0_video_out_TVALID
+      video_out_tdata(23 downto 0) => Conn4_TDATA(23 downto 0),
+      video_out_tlast => Conn4_TLAST,
+      video_out_tready => Conn4_TREADY,
+      video_out_tuser => Conn4_TUSER,
+      video_out_tvalid => Conn4_TVALID
     );
 clk_wiz_0: component ZynqberryMedianDesign_clk_wiz_0_0
      port map (
@@ -4773,7 +4837,7 @@ clk_wiz_0: component ZynqberryMedianDesign_clk_wiz_0_0
       s_axi_wstrb(3 downto 0) => ps7_0_axi_periph_1_M01_AXI_WSTRB(3 downto 0),
       s_axi_wvalid => ps7_0_axi_periph_1_M01_AXI_WVALID
     );
-ps7_0_axi_periph_video_out: entity work.ZynqberryMedianDesign_ps7_0_axi_periph_1_0
+ps7_0_axi_periph_video_out: entity work.ZynqberryMedianDesign_ps7_0_axi_periph_video_out_0
      port map (
       ACLK => ACLK_1,
       ARESETN => ARESETN_1,
@@ -4882,11 +4946,11 @@ v_axi4s_vid_out_0: component ZynqberryMedianDesign_v_axi4s_vid_out_0_0
       fid => '0',
       locked => v_axi4s_vid_out_0_locked,
       overflow => v_axi4s_vid_out_0_overflow,
-      s_axis_video_tdata(23 downto 0) => axis_fb_conv_0_video_out_TDATA(23 downto 0),
-      s_axis_video_tlast => axis_fb_conv_0_video_out_TLAST,
-      s_axis_video_tready => axis_fb_conv_0_video_out_TREADY,
-      s_axis_video_tuser => axis_fb_conv_0_video_out_TUSER,
-      s_axis_video_tvalid => axis_fb_conv_0_video_out_TVALID,
+      s_axis_video_tdata(23 downto 0) => Conn3_TDATA(23 downto 0),
+      s_axis_video_tlast => Conn3_TLAST,
+      s_axis_video_tready => Conn3_TREADY,
+      s_axis_video_tuser => Conn3_TUSER,
+      s_axis_video_tvalid => Conn3_TVALID,
       status(31 downto 0) => NLW_v_axi4s_vid_out_0_status_UNCONNECTED(31 downto 0),
       underflow => v_axi4s_vid_out_0_underflow,
       vid_active_video => v_axi4s_vid_out_0_vid_io_out_ACTIVE_VIDEO,
@@ -4983,7 +5047,7 @@ entity ZynqberryMedianDesign is
     hdmi_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of ZynqberryMedianDesign : entity is "ZynqberryMedianDesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ZynqberryMedianDesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=44,numReposBlks=29,numNonXlnxBlks=7,numHierBlks=15,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=10,da_board_cnt=1,da_clkrst_cnt=1,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of ZynqberryMedianDesign : entity is "ZynqberryMedianDesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ZynqberryMedianDesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=45,numReposBlks=29,numNonXlnxBlks=7,numHierBlks=16,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of ZynqberryMedianDesign : entity is "ZynqberryMedianDesign.hwdef";
 end ZynqberryMedianDesign;
@@ -5271,6 +5335,11 @@ architecture STRUCTURE of ZynqberryMedianDesign is
   signal VideoOut_mm2s_introut : STD_LOGIC;
   signal VideoOut_overflow : STD_LOGIC;
   signal VideoOut_underflow : STD_LOGIC;
+  signal VideoOut_video_out_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal VideoOut_video_out_TLAST : STD_LOGIC;
+  signal VideoOut_video_out_TREADY : STD_LOGIC;
+  signal VideoOut_video_out_TUSER : STD_LOGIC;
+  signal VideoOut_video_out_TVALID : STD_LOGIC;
   signal VideoOut_vsync_out : STD_LOGIC;
   signal VideoOut_vtg_ce : STD_LOGIC;
   signal csi_c_clk_n_1 : STD_LOGIC;
@@ -5381,6 +5450,11 @@ architecture STRUCTURE of ZynqberryMedianDesign is
   signal processing_system7_0_M_AXI_GP1_WVALID : STD_LOGIC;
   signal rst_ps7_0_50M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_50M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal video_in_1_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal video_in_1_TLAST : STD_LOGIC;
+  signal video_in_1_TREADY : STD_LOGIC;
+  signal video_in_1_TUSER : STD_LOGIC;
+  signal video_in_1_TVALID : STD_LOGIC;
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal xlconcat_1_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal NLW_VideoOut_active_video_out_UNCONNECTED : STD_LOGIC;
@@ -5426,6 +5500,21 @@ begin
   hdmi_clk_p <= VideoOut_hdmi_clk_p;
   hdmi_data_n(2 downto 0) <= VideoOut_hdmi_data_n(2 downto 0);
   hdmi_data_p(2 downto 0) <= VideoOut_hdmi_data_p(2 downto 0);
+INSERT_FILTER_HERE: entity work.INSERT_FILTER_HERE_imp_1O5KWGG
+     port map (
+      ap_clk => processing_system7_0_FCLK_CLK0,
+      ap_rst_n => rst_ps7_0_50M_peripheral_aresetn(0),
+      stream_in_tdata(23 downto 0) => VideoOut_video_out_TDATA(23 downto 0),
+      stream_in_tlast => VideoOut_video_out_TLAST,
+      stream_in_tready => VideoOut_video_out_TREADY,
+      stream_in_tuser => VideoOut_video_out_TUSER,
+      stream_in_tvalid => VideoOut_video_out_TVALID,
+      stream_out_tdata(23 downto 0) => video_in_1_TDATA(23 downto 0),
+      stream_out_tlast => video_in_1_TLAST,
+      stream_out_tready => video_in_1_TREADY,
+      stream_out_tuser => video_in_1_TUSER,
+      stream_out_tvalid => video_in_1_TVALID
+    );
 VideoIn: entity work.VideoIn_imp_1CPRT79
      port map (
       ARESETN => rst_ps7_0_50M_interconnect_aresetn(0),
@@ -5567,6 +5656,16 @@ VideoOut: entity work.VideoOut_imp_MT3ZYE
       mm2s_introut => VideoOut_mm2s_introut,
       overflow => VideoOut_overflow,
       underflow => VideoOut_underflow,
+      video_in_tdata(23 downto 0) => video_in_1_TDATA(23 downto 0),
+      video_in_tlast => video_in_1_TLAST,
+      video_in_tready => video_in_1_TREADY,
+      video_in_tuser => video_in_1_TUSER,
+      video_in_tvalid => video_in_1_TVALID,
+      video_out_tdata(23 downto 0) => VideoOut_video_out_TDATA(23 downto 0),
+      video_out_tlast => VideoOut_video_out_TLAST,
+      video_out_tready => VideoOut_video_out_TREADY,
+      video_out_tuser => VideoOut_video_out_TUSER,
+      video_out_tvalid => VideoOut_video_out_TVALID,
       vsync_out => VideoOut_vsync_out,
       vtg_ce => VideoOut_vtg_ce
     );
