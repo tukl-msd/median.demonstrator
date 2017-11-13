@@ -1,7 +1,7 @@
 --Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2017.2 (lin64) Build 1909853 Thu Jun 15 18:39:10 MDT 2017
---Date        : Thu Nov  9 16:44:17 2017
+--Date        : Mon Nov 13 21:46:44 2017
 --Host        : CentOSVivado running 64-bit unknown
 --Command     : generate_target ZynqberryMedianDesign.bd
 --Design      : ZynqberryMedianDesign
@@ -16,35 +16,75 @@ entity INSERT_FILTER_HERE_imp_1O5KWGG is
     ap_clk : in STD_LOGIC;
     ap_rst_n : in STD_LOGIC;
     stream_in_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    stream_in_tlast : in STD_LOGIC;
+    stream_in_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
     stream_in_tready : out STD_LOGIC;
-    stream_in_tuser : in STD_LOGIC;
+    stream_in_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     stream_in_tvalid : in STD_LOGIC;
     stream_out_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    stream_out_tlast : out STD_LOGIC;
+    stream_out_tlast : out STD_LOGIC_VECTOR ( 0 to 0 );
     stream_out_tready : in STD_LOGIC;
-    stream_out_tuser : out STD_LOGIC;
+    stream_out_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
     stream_out_tvalid : out STD_LOGIC
   );
 end INSERT_FILTER_HERE_imp_1O5KWGG;
 
 architecture STRUCTURE of INSERT_FILTER_HERE_imp_1O5KWGG is
+  component ZynqberryMedianDesign_top_0_0 is
+  port (
+    stream_in_TVALID : in STD_LOGIC;
+    stream_in_TREADY : out STD_LOGIC;
+    stream_in_TDATA : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    stream_in_TUSER : in STD_LOGIC_VECTOR ( 0 to 0 );
+    stream_in_TLAST : in STD_LOGIC_VECTOR ( 0 to 0 );
+    stream_out_TVALID : out STD_LOGIC;
+    stream_out_TREADY : in STD_LOGIC;
+    stream_out_TDATA : out STD_LOGIC_VECTOR ( 23 downto 0 );
+    stream_out_TUSER : out STD_LOGIC_VECTOR ( 0 to 0 );
+    stream_out_TLAST : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ap_clk : in STD_LOGIC;
+    ap_rst_n : in STD_LOGIC
+  );
+  end component ZynqberryMedianDesign_top_0_0;
+  signal ap_clk_1 : STD_LOGIC;
+  signal ap_rst_n_1 : STD_LOGIC;
   signal stream_in_1_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal stream_in_1_TLAST : STD_LOGIC;
+  signal stream_in_1_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
   signal stream_in_1_TREADY : STD_LOGIC;
-  signal stream_in_1_TUSER : STD_LOGIC;
+  signal stream_in_1_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal stream_in_1_TVALID : STD_LOGIC;
+  signal top_0_stream_out_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
+  signal top_0_stream_out_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal top_0_stream_out_TREADY : STD_LOGIC;
+  signal top_0_stream_out_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal top_0_stream_out_TVALID : STD_LOGIC;
 begin
+  ap_clk_1 <= ap_clk;
+  ap_rst_n_1 <= ap_rst_n;
   stream_in_1_TDATA(23 downto 0) <= stream_in_tdata(23 downto 0);
-  stream_in_1_TLAST <= stream_in_tlast;
-  stream_in_1_TREADY <= stream_out_tready;
-  stream_in_1_TUSER <= stream_in_tuser;
+  stream_in_1_TLAST(0) <= stream_in_tlast(0);
+  stream_in_1_TUSER(0) <= stream_in_tuser(0);
   stream_in_1_TVALID <= stream_in_tvalid;
   stream_in_tready <= stream_in_1_TREADY;
-  stream_out_tdata(23 downto 0) <= stream_in_1_TDATA(23 downto 0);
-  stream_out_tlast <= stream_in_1_TLAST;
-  stream_out_tuser <= stream_in_1_TUSER;
-  stream_out_tvalid <= stream_in_1_TVALID;
+  stream_out_tdata(23 downto 0) <= top_0_stream_out_TDATA(23 downto 0);
+  stream_out_tlast(0) <= top_0_stream_out_TLAST(0);
+  stream_out_tuser(0) <= top_0_stream_out_TUSER(0);
+  stream_out_tvalid <= top_0_stream_out_TVALID;
+  top_0_stream_out_TREADY <= stream_out_tready;
+top_0: component ZynqberryMedianDesign_top_0_0
+     port map (
+      ap_clk => ap_clk_1,
+      ap_rst_n => ap_rst_n_1,
+      stream_in_TDATA(23 downto 0) => stream_in_1_TDATA(23 downto 0),
+      stream_in_TLAST(0) => stream_in_1_TLAST(0),
+      stream_in_TREADY => stream_in_1_TREADY,
+      stream_in_TUSER(0) => stream_in_1_TUSER(0),
+      stream_in_TVALID => stream_in_1_TVALID,
+      stream_out_TDATA(23 downto 0) => top_0_stream_out_TDATA(23 downto 0),
+      stream_out_TLAST(0) => top_0_stream_out_TLAST(0),
+      stream_out_TREADY => top_0_stream_out_TREADY,
+      stream_out_TUSER(0) => top_0_stream_out_TUSER(0),
+      stream_out_TVALID => top_0_stream_out_TVALID
+    );
 end STRUCTURE;
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
@@ -4264,14 +4304,14 @@ entity VideoOut_imp_MT3ZYE is
     overflow : out STD_LOGIC;
     underflow : out STD_LOGIC;
     video_in_tdata : in STD_LOGIC_VECTOR ( 23 downto 0 );
-    video_in_tlast : in STD_LOGIC;
+    video_in_tlast : in STD_LOGIC_VECTOR ( 0 to 0 );
     video_in_tready : out STD_LOGIC;
-    video_in_tuser : in STD_LOGIC;
+    video_in_tuser : in STD_LOGIC_VECTOR ( 0 to 0 );
     video_in_tvalid : in STD_LOGIC;
     video_out_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
-    video_out_tlast : out STD_LOGIC;
+    video_out_tlast : out STD_LOGIC_VECTOR ( 0 to 0 );
     video_out_tready : in STD_LOGIC;
-    video_out_tuser : out STD_LOGIC;
+    video_out_tuser : out STD_LOGIC_VECTOR ( 0 to 0 );
     video_out_tvalid : out STD_LOGIC;
     vsync_out : out STD_LOGIC;
     vtg_ce : out STD_LOGIC
@@ -4510,9 +4550,9 @@ architecture STRUCTURE of VideoOut_imp_MT3ZYE is
   signal Conn2_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal Conn2_WVALID : STD_LOGIC;
   signal Conn3_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal Conn3_TLAST : STD_LOGIC;
+  signal Conn3_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Conn3_TREADY : STD_LOGIC;
-  signal Conn3_TUSER : STD_LOGIC;
+  signal Conn3_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal Conn3_TVALID : STD_LOGIC;
   signal Conn4_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal Conn4_TLAST : STD_LOGIC;
@@ -4654,8 +4694,8 @@ begin
   Conn2_WSTRB(3 downto 0) <= S00_AXI_wstrb(3 downto 0);
   Conn2_WVALID <= S00_AXI_wvalid;
   Conn3_TDATA(23 downto 0) <= video_in_tdata(23 downto 0);
-  Conn3_TLAST <= video_in_tlast;
-  Conn3_TUSER <= video_in_tuser;
+  Conn3_TLAST(0) <= video_in_tlast(0);
+  Conn3_TUSER(0) <= video_in_tuser(0);
   Conn3_TVALID <= video_in_tvalid;
   Conn4_TREADY <= video_out_tready;
   M00_AXI_araddr(31 downto 0) <= Conn1_ARADDR(31 downto 0);
@@ -4694,8 +4734,8 @@ begin
   underflow <= v_axi4s_vid_out_0_underflow;
   video_in_tready <= Conn3_TREADY;
   video_out_tdata(23 downto 0) <= Conn4_TDATA(23 downto 0);
-  video_out_tlast <= Conn4_TLAST;
-  video_out_tuser <= Conn4_TUSER;
+  video_out_tlast(0) <= Conn4_TLAST;
+  video_out_tuser(0) <= Conn4_TUSER;
   video_out_tvalid <= Conn4_TVALID;
   vsync_out <= v_tc_0_vsync_out;
   vtg_ce <= v_axi4s_vid_out_0_vtg_ce;
@@ -4947,9 +4987,9 @@ v_axi4s_vid_out_0: component ZynqberryMedianDesign_v_axi4s_vid_out_0_0
       locked => v_axi4s_vid_out_0_locked,
       overflow => v_axi4s_vid_out_0_overflow,
       s_axis_video_tdata(23 downto 0) => Conn3_TDATA(23 downto 0),
-      s_axis_video_tlast => Conn3_TLAST,
+      s_axis_video_tlast => Conn3_TLAST(0),
       s_axis_video_tready => Conn3_TREADY,
-      s_axis_video_tuser => Conn3_TUSER,
+      s_axis_video_tuser => Conn3_TUSER(0),
       s_axis_video_tvalid => Conn3_TVALID,
       status(31 downto 0) => NLW_v_axi4s_vid_out_0_status_UNCONNECTED(31 downto 0),
       underflow => v_axi4s_vid_out_0_underflow,
@@ -5047,7 +5087,7 @@ entity ZynqberryMedianDesign is
     hdmi_data_p : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of ZynqberryMedianDesign : entity is "ZynqberryMedianDesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ZynqberryMedianDesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=45,numReposBlks=29,numNonXlnxBlks=7,numHierBlks=16,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=1,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of ZynqberryMedianDesign : entity is "ZynqberryMedianDesign,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=ZynqberryMedianDesign,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=46,numReposBlks=30,numNonXlnxBlks=8,numHierBlks=16,maxHierDepth=1,numSysgenBlks=0,numHlsBlks=2,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of ZynqberryMedianDesign : entity is "ZynqberryMedianDesign.hwdef";
 end ZynqberryMedianDesign;
@@ -5336,9 +5376,9 @@ architecture STRUCTURE of ZynqberryMedianDesign is
   signal VideoOut_overflow : STD_LOGIC;
   signal VideoOut_underflow : STD_LOGIC;
   signal VideoOut_video_out_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal VideoOut_video_out_TLAST : STD_LOGIC;
+  signal VideoOut_video_out_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
   signal VideoOut_video_out_TREADY : STD_LOGIC;
-  signal VideoOut_video_out_TUSER : STD_LOGIC;
+  signal VideoOut_video_out_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal VideoOut_video_out_TVALID : STD_LOGIC;
   signal VideoOut_vsync_out : STD_LOGIC;
   signal VideoOut_vtg_ce : STD_LOGIC;
@@ -5451,9 +5491,9 @@ architecture STRUCTURE of ZynqberryMedianDesign is
   signal rst_ps7_0_50M_interconnect_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal rst_ps7_0_50M_peripheral_aresetn : STD_LOGIC_VECTOR ( 0 to 0 );
   signal video_in_1_TDATA : STD_LOGIC_VECTOR ( 23 downto 0 );
-  signal video_in_1_TLAST : STD_LOGIC;
+  signal video_in_1_TLAST : STD_LOGIC_VECTOR ( 0 to 0 );
   signal video_in_1_TREADY : STD_LOGIC;
-  signal video_in_1_TUSER : STD_LOGIC;
+  signal video_in_1_TUSER : STD_LOGIC_VECTOR ( 0 to 0 );
   signal video_in_1_TVALID : STD_LOGIC;
   signal xlconcat_0_dout : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal xlconcat_1_dout : STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -5505,14 +5545,14 @@ INSERT_FILTER_HERE: entity work.INSERT_FILTER_HERE_imp_1O5KWGG
       ap_clk => processing_system7_0_FCLK_CLK0,
       ap_rst_n => rst_ps7_0_50M_peripheral_aresetn(0),
       stream_in_tdata(23 downto 0) => VideoOut_video_out_TDATA(23 downto 0),
-      stream_in_tlast => VideoOut_video_out_TLAST,
+      stream_in_tlast(0) => VideoOut_video_out_TLAST(0),
       stream_in_tready => VideoOut_video_out_TREADY,
-      stream_in_tuser => VideoOut_video_out_TUSER,
+      stream_in_tuser(0) => VideoOut_video_out_TUSER(0),
       stream_in_tvalid => VideoOut_video_out_TVALID,
       stream_out_tdata(23 downto 0) => video_in_1_TDATA(23 downto 0),
-      stream_out_tlast => video_in_1_TLAST,
+      stream_out_tlast(0) => video_in_1_TLAST(0),
       stream_out_tready => video_in_1_TREADY,
-      stream_out_tuser => video_in_1_TUSER,
+      stream_out_tuser(0) => video_in_1_TUSER(0),
       stream_out_tvalid => video_in_1_TVALID
     );
 VideoIn: entity work.VideoIn_imp_1CPRT79
@@ -5657,14 +5697,14 @@ VideoOut: entity work.VideoOut_imp_MT3ZYE
       overflow => VideoOut_overflow,
       underflow => VideoOut_underflow,
       video_in_tdata(23 downto 0) => video_in_1_TDATA(23 downto 0),
-      video_in_tlast => video_in_1_TLAST,
+      video_in_tlast(0) => video_in_1_TLAST(0),
       video_in_tready => video_in_1_TREADY,
-      video_in_tuser => video_in_1_TUSER,
+      video_in_tuser(0) => video_in_1_TUSER(0),
       video_in_tvalid => video_in_1_TVALID,
       video_out_tdata(23 downto 0) => VideoOut_video_out_TDATA(23 downto 0),
-      video_out_tlast => VideoOut_video_out_TLAST,
+      video_out_tlast(0) => VideoOut_video_out_TLAST(0),
       video_out_tready => VideoOut_video_out_TREADY,
-      video_out_tuser => VideoOut_video_out_TUSER,
+      video_out_tuser(0) => VideoOut_video_out_TUSER(0),
       video_out_tvalid => VideoOut_video_out_TVALID,
       vsync_out => VideoOut_vsync_out,
       vtg_ce => VideoOut_vtg_ce

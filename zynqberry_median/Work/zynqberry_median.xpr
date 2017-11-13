@@ -25,7 +25,7 @@
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>
     <Option Name="IPCachePermission" Val="read"/>
     <Option Name="IPCachePermission" Val="write"/>
-    <Option Name="EnableCoreContainer" Val="FALSE"/>
+    <Option Name="EnableCoreContainer" Val="TRUE"/>
     <Option Name="CreateRefXciForCoreContainers" Val="FALSE"/>
     <Option Name="IPUserFilesDir" Val="$PIPUSERFILESDIR"/>
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
@@ -39,13 +39,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="11"/>
-    <Option Name="WTModelSimExportSim" Val="11"/>
-    <Option Name="WTQuestaExportSim" Val="11"/>
-    <Option Name="WTIesExportSim" Val="11"/>
-    <Option Name="WTVcsExportSim" Val="11"/>
-    <Option Name="WTRivieraExportSim" Val="11"/>
-    <Option Name="WTActivehdlExportSim" Val="11"/>
+    <Option Name="WTXSimExportSim" Val="13"/>
+    <Option Name="WTModelSimExportSim" Val="13"/>
+    <Option Name="WTQuestaExportSim" Val="13"/>
+    <Option Name="WTIesExportSim" Val="13"/>
+    <Option Name="WTVcsExportSim" Val="13"/>
+    <Option Name="WTRivieraExportSim" Val="13"/>
+    <Option Name="WTActivehdlExportSim" Val="13"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -61,77 +61,80 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_processing_system7_0_0/ZynqberryMedianDesign_processing_system7_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axi_vdma_0_1/ZynqberryMedianDesign_axi_vdma_0_1.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_axi_vdma_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_rst_ps7_0_50M_0/ZynqberryMedianDesign_rst_ps7_0_50M_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_rst_ps7_0_50M_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xlconcat_0_0/ZynqberryMedianDesign_xlconcat_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_xlconcat_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xlconcat_1_0/ZynqberryMedianDesign_xlconcat_1_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_xlconcat_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axi_vdma_0_0/ZynqberryMedianDesign_axi_vdma_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_axi_vdma_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_csi2_d_phy_rx_0_0/ZynqberryMedianDesign_csi2_d_phy_rx_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_csi2_d_phy_rx_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_csi_to_axis_0_0/ZynqberryMedianDesign_csi_to_axis_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_csi_to_axis_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_proc_sys_reset_0_0/ZynqberryMedianDesign_proc_sys_reset_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_proc_sys_reset_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_data_fifo_0_0/ZynqberryMedianDesign_axis_data_fifo_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_axis_data_fifo_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_raw_unpack_0_0/ZynqberryMedianDesign_axis_raw_unpack_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_axis_raw_unpack_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_data_fifo_1_0/ZynqberryMedianDesign_axis_data_fifo_1_0.xci">
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_data_fifo_1_0_2/ZynqberryMedianDesign_axis_data_fifo_1_0.xci">
           <Proxy FileSetName="ZynqberryMedianDesign_axis_data_fifo_1_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_raw_demosaic_0_0/ZynqberryMedianDesign_axis_raw_demosaic_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_axis_raw_demosaic_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_data_fifo_2_0/ZynqberryMedianDesign_axis_data_fifo_2_0.xci">
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_data_fifo_2_0_2/ZynqberryMedianDesign_axis_data_fifo_2_0.xci">
           <Proxy FileSetName="ZynqberryMedianDesign_axis_data_fifo_2_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_stpg_0_0/ZynqberryMedianDesign_stpg_0_0.xci">
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_stpg_0_0_2/ZynqberryMedianDesign_stpg_0_0.xci">
           <Proxy FileSetName="ZynqberryMedianDesign_stpg_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xlconstant_0_0/ZynqberryMedianDesign_xlconstant_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_xlconstant_0_0"/>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_raw_unpack_0_0_2/ZynqberryMedianDesign_axis_raw_unpack_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_axis_raw_unpack_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xlconcat_0_1/ZynqberryMedianDesign_xlconcat_0_1.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_xlconcat_0_1"/>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_data_fifo_0_0_2/ZynqberryMedianDesign_axis_data_fifo_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_axis_data_fifo_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xbar_0/ZynqberryMedianDesign_xbar_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axi_vdma_0_0_2/ZynqberryMedianDesign_axi_vdma_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_axi_vdma_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_clk_wiz_0_0/ZynqberryMedianDesign_clk_wiz_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_clk_wiz_0_0"/>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axi_vdma_0_1_2/ZynqberryMedianDesign_axi_vdma_0_1.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_axi_vdma_0_1"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_v_tc_0_0/ZynqberryMedianDesign_v_tc_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_v_tc_0_0"/>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_processing_system7_0_0_2/ZynqberryMedianDesign_processing_system7_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_v_axi4s_vid_out_0_0/ZynqberryMedianDesign_v_axi4s_vid_out_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_v_axi4s_vid_out_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0/ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0.xci">
-          <Proxy FileSetName="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_fb_conv_0_0/ZynqberryMedianDesign_axis_fb_conv_0_0.xci">
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_fb_conv_0_0_2/ZynqberryMedianDesign_axis_fb_conv_0_0.xci">
           <Proxy FileSetName="ZynqberryMedianDesign_axis_fb_conv_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xbar_1/ZynqberryMedianDesign_xbar_1.xci">
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_proc_sys_reset_0_0_2/ZynqberryMedianDesign_proc_sys_reset_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_proc_sys_reset_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_axis_raw_demosaic_0_0_2/ZynqberryMedianDesign_axis_raw_demosaic_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_axis_raw_demosaic_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_csi_to_axis_0_0_2/ZynqberryMedianDesign_csi_to_axis_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_csi_to_axis_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_csi2_d_phy_rx_0_0_2/ZynqberryMedianDesign_csi2_d_phy_rx_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_csi2_d_phy_rx_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xlconcat_0_0_2/ZynqberryMedianDesign_xlconcat_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_xlconcat_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xlconcat_1_0_2/ZynqberryMedianDesign_xlconcat_1_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_xlconcat_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xbar_0_2/ZynqberryMedianDesign_xbar_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xlconstant_0_0_2/ZynqberryMedianDesign_xlconstant_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_xlconstant_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xlconcat_0_1_2/ZynqberryMedianDesign_xlconcat_0_1.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_xlconcat_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_rst_ps7_0_50M_0_2/ZynqberryMedianDesign_rst_ps7_0_50M_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_rst_ps7_0_50M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_xbar_1_2/ZynqberryMedianDesign_xbar_1.xci">
           <Proxy FileSetName="ZynqberryMedianDesign_xbar_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_v_axi4s_vid_out_0_0_2/ZynqberryMedianDesign_v_axi4s_vid_out_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_v_axi4s_vid_out_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_v_tc_0_0_2/ZynqberryMedianDesign_v_tc_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_v_tc_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0_2/ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_clk_wiz_0_0_2/ZynqberryMedianDesign_clk_wiz_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="ZynqberryMedianDesign.bd" FileRelPathName="ip/ZynqberryMedianDesign_top_0_0/ZynqberryMedianDesign_top_0_0.xci">
+          <Proxy FileSetName="ZynqberryMedianDesign_top_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PPRDIR/../RTL/ZynqberryMedianDesign/hdl/ZynqberryMedianDesign_wrapper.vhd">
@@ -168,30 +171,6 @@
         <Option Name="SrcSet" Val="sources_1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_xlconstant_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_xlconstant_0_0">
-      <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_xlconstant_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_xlconcat_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_xlconcat_0_1">
-      <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_xlconcat_0_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_axis_data_fifo_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_axis_data_fifo_0_0">
-      <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_axis_data_fifo_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_stpg_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_stpg_0_0">
-      <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_stpg_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="ZynqberryMedianDesign_axis_data_fifo_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_axis_data_fifo_1_0">
       <Config>
         <Option Name="TopModule" Val="ZynqberryMedianDesign_axis_data_fifo_1_0"/>
@@ -204,9 +183,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_axis_raw_demosaic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_axis_raw_demosaic_0_0">
+    <FileSet Name="ZynqberryMedianDesign_stpg_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_stpg_0_0">
       <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_axis_raw_demosaic_0_0"/>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_stpg_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -216,21 +195,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_csi_to_axis_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_csi_to_axis_0_0">
+    <FileSet Name="ZynqberryMedianDesign_axis_data_fifo_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_axis_data_fifo_0_0">
       <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_csi_to_axis_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_proc_sys_reset_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_proc_sys_reset_0_0">
-      <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_proc_sys_reset_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_csi2_d_phy_rx_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_csi2_d_phy_rx_0_0">
-      <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_csi2_d_phy_rx_0_0"/>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_axis_data_fifo_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -240,21 +207,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_xlconcat_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_xlconcat_1_0">
-      <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_xlconcat_1_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="ZynqberryMedianDesign_axi_vdma_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_axi_vdma_0_1">
       <Config>
         <Option Name="TopModule" Val="ZynqberryMedianDesign_axi_vdma_0_1"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_xbar_0">
-      <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_xbar_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -264,15 +219,75 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_rst_ps7_0_50M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_rst_ps7_0_50M_0">
+    <FileSet Name="ZynqberryMedianDesign_axis_fb_conv_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_axis_fb_conv_0_0">
       <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_rst_ps7_0_50M_0"/>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_axis_fb_conv_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ZynqberryMedianDesign_proc_sys_reset_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_proc_sys_reset_0_0">
+      <Config>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_proc_sys_reset_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ZynqberryMedianDesign_axis_raw_demosaic_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_axis_raw_demosaic_0_0">
+      <Config>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_axis_raw_demosaic_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ZynqberryMedianDesign_csi_to_axis_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_csi_to_axis_0_0">
+      <Config>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_csi_to_axis_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ZynqberryMedianDesign_csi2_d_phy_rx_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_csi2_d_phy_rx_0_0">
+      <Config>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_csi2_d_phy_rx_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
     <FileSet Name="ZynqberryMedianDesign_xlconcat_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_xlconcat_0_0">
       <Config>
         <Option Name="TopModule" Val="ZynqberryMedianDesign_xlconcat_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ZynqberryMedianDesign_xlconcat_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_xlconcat_1_0">
+      <Config>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_xlconcat_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ZynqberryMedianDesign_xbar_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_xbar_0">
+      <Config>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_xbar_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ZynqberryMedianDesign_xlconstant_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_xlconstant_0_0">
+      <Config>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_xlconstant_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ZynqberryMedianDesign_xlconcat_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_xlconcat_0_1">
+      <Config>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_xlconcat_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ZynqberryMedianDesign_rst_ps7_0_50M_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_rst_ps7_0_50M_0">
+      <Config>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_rst_ps7_0_50M_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="ZynqberryMedianDesign_xbar_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_xbar_1">
+      <Config>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_xbar_1"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -300,15 +315,29 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_axis_fb_conv_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_axis_fb_conv_0_0">
+    <FileSet Name="top_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/top_0">
+      <File Path="$PSRCDIR/sources_1/ip/top_0.xcix">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/ip/top_0/top_0.xci">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_axis_fb_conv_0_0"/>
+        <Option Name="TopModule" Val="top_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="ZynqberryMedianDesign_xbar_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_xbar_1">
+    <FileSet Name="ZynqberryMedianDesign_top_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/ZynqberryMedianDesign_top_0_0">
       <Config>
-        <Option Name="TopModule" Val="ZynqberryMedianDesign_xbar_1"/>
+        <Option Name="TopModule" Val="ZynqberryMedianDesign_top_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -344,45 +373,11 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ZynqberryMedianDesign_xlconstant_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_xlconstant_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconstant_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_xlconstant_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_xlconcat_0_1_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_xlconcat_0_1" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_xlconcat_0_1_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_axis_data_fifo_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_axis_data_fifo_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_data_fifo_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_axis_data_fifo_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_stpg_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_stpg_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_stpg_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_stpg_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="ZynqberryMedianDesign_axis_data_fifo_1_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_axis_data_fifo_1_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_data_fifo_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_axis_data_fifo_1_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -391,16 +386,20 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_axis_data_fifo_2_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_axis_data_fifo_2_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_data_fifo_2_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_axis_data_fifo_2_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ZynqberryMedianDesign_axis_raw_demosaic_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_axis_raw_demosaic_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_raw_demosaic_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_axis_raw_demosaic_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="ZynqberryMedianDesign_stpg_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_stpg_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_stpg_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_stpg_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -409,34 +408,20 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_axis_raw_unpack_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_axis_raw_unpack_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_raw_unpack_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_axis_raw_unpack_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ZynqberryMedianDesign_csi_to_axis_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_csi_to_axis_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_csi_to_axis_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_csi_to_axis_0_0_synth_1" IncludeInArchive="true">
+    <Run Id="ZynqberryMedianDesign_axis_data_fifo_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_axis_data_fifo_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_data_fifo_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_axis_data_fifo_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_proc_sys_reset_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_proc_sys_reset_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_proc_sys_reset_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_proc_sys_reset_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_csi2_d_phy_rx_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_csi2_d_phy_rx_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_csi2_d_phy_rx_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_csi2_d_phy_rx_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -445,16 +430,9 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_axi_vdma_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_axi_vdma_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axi_vdma_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_axi_vdma_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_xlconcat_1_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_xlconcat_1_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_xlconcat_1_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -463,16 +441,9 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_axi_vdma_0_1_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_axi_vdma_0_1" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axi_vdma_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_axi_vdma_0_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_xbar_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xbar_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_xbar_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -481,61 +452,9 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_processing_system7_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_processing_system7_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_processing_system7_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_rst_ps7_0_50M_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_rst_ps7_0_50M_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_rst_ps7_0_50M_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_rst_ps7_0_50M_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_xlconcat_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_xlconcat_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_xlconcat_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_v_axi4s_vid_out_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_v_axi4s_vid_out_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_v_axi4s_vid_out_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_v_axi4s_vid_out_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_v_tc_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_v_tc_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_v_tc_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_v_tc_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
-        <Step Id="synth_design"/>
-      </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_clk_wiz_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_clk_wiz_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_clk_wiz_0_0_synth_1" IncludeInArchive="true">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -544,7 +463,119 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_axis_fb_conv_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_axis_fb_conv_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_fb_conv_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_axis_fb_conv_0_0_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_proc_sys_reset_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_proc_sys_reset_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_proc_sys_reset_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_proc_sys_reset_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_axis_raw_demosaic_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_axis_raw_demosaic_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_raw_demosaic_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_axis_raw_demosaic_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_csi_to_axis_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_csi_to_axis_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_csi_to_axis_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_csi_to_axis_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_csi2_d_phy_rx_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_csi2_d_phy_rx_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_csi2_d_phy_rx_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_csi2_d_phy_rx_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_xlconcat_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_xlconcat_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_xlconcat_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_xlconcat_1_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_xlconcat_1_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_1_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_xlconcat_1_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_xbar_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_xbar_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xbar_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_xbar_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_xlconstant_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_xlconstant_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconstant_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_xlconstant_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_xlconcat_0_1_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_xlconcat_0_1" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_0_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_xlconcat_0_1_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_rst_ps7_0_50M_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_rst_ps7_0_50M_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_rst_ps7_0_50M_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_rst_ps7_0_50M_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -553,7 +584,75 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_xbar_1_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_xbar_1" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xbar_1" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_xbar_1_synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_v_axi4s_vid_out_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_v_axi4s_vid_out_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_v_axi4s_vid_out_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_v_axi4s_vid_out_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_v_tc_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_v_tc_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_v_tc_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_v_tc_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_clk_wiz_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_clk_wiz_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_clk_wiz_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_0_synth_1" Type="Ft3:Synth" SrcSet="top_0" Part="xc7z010clg225-1" ConstrsSet="top_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/top_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_top_0_0_synth_1" Type="Ft3:Synth" SrcSet="ZynqberryMedianDesign_top_0_0" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_top_0_0" Description="Vivado Synthesis Defaults" Dir="$PRUNDIR/ZynqberryMedianDesign_top_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -577,73 +676,11 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ZynqberryMedianDesign_xlconstant_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconstant_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_xlconstant_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_xlconcat_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_0_1" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_xlconcat_0_1_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_axis_data_fifo_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_data_fifo_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_axis_data_fifo_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_stpg_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_stpg_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_stpg_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
     <Run Id="ZynqberryMedianDesign_axis_data_fifo_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_data_fifo_1_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_axis_data_fifo_1_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -659,7 +696,9 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_axis_data_fifo_2_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_data_fifo_2_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_axis_data_fifo_2_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -673,9 +712,11 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ZynqberryMedianDesign_axis_raw_demosaic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_raw_demosaic_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_axis_raw_demosaic_0_0_synth_1" IncludeInArchive="false">
+    <Run Id="ZynqberryMedianDesign_stpg_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_stpg_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_stpg_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -691,7 +732,9 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_axis_raw_unpack_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_raw_unpack_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_axis_raw_unpack_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -705,41 +748,11 @@
       <ReportStrategy/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="ZynqberryMedianDesign_csi_to_axis_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_csi_to_axis_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_csi_to_axis_0_0_synth_1" IncludeInArchive="false">
+    <Run Id="ZynqberryMedianDesign_axis_data_fifo_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_data_fifo_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_axis_data_fifo_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_proc_sys_reset_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_proc_sys_reset_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_proc_sys_reset_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_csi2_d_phy_rx_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_csi2_d_phy_rx_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_csi2_d_phy_rx_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -755,23 +768,9 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_axi_vdma_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axi_vdma_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_axi_vdma_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_xlconcat_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_1_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_xlconcat_1_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -787,23 +786,9 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_axi_vdma_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axi_vdma_0_1" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_axi_vdma_0_1_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xbar_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_xbar_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -819,103 +804,9 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_processing_system7_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_processing_system7_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_rst_ps7_0_50M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_rst_ps7_0_50M_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_rst_ps7_0_50M_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_xlconcat_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_xlconcat_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_v_axi4s_vid_out_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_v_axi4s_vid_out_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_v_axi4s_vid_out_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_v_tc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_v_tc_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_v_tc_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
-        <Step Id="init_design"/>
-        <Step Id="opt_design"/>
-        <Step Id="power_opt_design"/>
-        <Step Id="place_design"/>
-        <Step Id="post_place_power_opt_design"/>
-        <Step Id="phys_opt_design"/>
-        <Step Id="route_design"/>
-        <Step Id="post_route_phys_opt_design"/>
-        <Step Id="write_bitstream"/>
-      </Strategy>
-      <ReportStrategy/>
-      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
-    </Run>
-    <Run Id="ZynqberryMedianDesign_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_clk_wiz_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_clk_wiz_0_0_synth_1" IncludeInArchive="false">
-      <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -931,7 +822,189 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_axis_fb_conv_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_fb_conv_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_axis_fb_conv_0_0_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_proc_sys_reset_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_proc_sys_reset_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_proc_sys_reset_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_axis_raw_demosaic_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_axis_raw_demosaic_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_axis_raw_demosaic_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_csi_to_axis_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_csi_to_axis_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_csi_to_axis_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_csi2_d_phy_rx_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_csi2_d_phy_rx_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_csi2_d_phy_rx_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_xlconcat_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_xlconcat_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_xlconcat_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_1_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_xlconcat_1_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_xbar_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xbar_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_xbar_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_xlconstant_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconstant_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_xlconstant_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_xlconcat_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xlconcat_0_1" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_xlconcat_0_1_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_rst_ps7_0_50M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_rst_ps7_0_50M_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_rst_ps7_0_50M_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -947,7 +1020,117 @@
     </Run>
     <Run Id="ZynqberryMedianDesign_xbar_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_xbar_1" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_xbar_1_synth_1" IncludeInArchive="false">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_v_axi4s_vid_out_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_v_axi4s_vid_out_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_v_axi4s_vid_out_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_v_tc_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_v_tc_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_v_tc_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_Video_IO_2_HDMI_TMDS_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_clk_wiz_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_clk_wiz_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="top_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="top_0" Description="Default settings for Implementation." SynthRun="top_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+    </Run>
+    <Run Id="ZynqberryMedianDesign_top_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg225-1" ConstrsSet="ZynqberryMedianDesign_top_0_0" Description="Default settings for Implementation." SynthRun="ZynqberryMedianDesign_top_0_0_synth_1" IncludeInArchive="false">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

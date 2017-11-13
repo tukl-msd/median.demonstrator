@@ -767,11 +767,34 @@
     <spirit:library>BlockDiagram/ZynqberryMedianDesign_imp</spirit:library>
     <spirit:name>INSERT_FILTER_HERE_imp</spirit:name>
     <spirit:version>1.00.a</spirit:version>
+    <spirit:componentInstances>
+      <spirit:componentInstance>
+        <spirit:instanceName>top_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="hls" spirit:name="top" spirit:vendor="JohannesFeldmann" spirit:version="1.0"/>
+        <spirit:configurableElementValues>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">ZynqberryMedianDesign_top_0_0</spirit:configurableElementValue>
+        </spirit:configurableElementValues>
+      </spirit:componentInstance>
+    </spirit:componentInstances>
     <spirit:interconnections/>
-    <spirit:adHocConnections/>
+    <spirit:adHocConnections>
+      <spirit:adHocConnection>
+        <spirit:name>ap_clk_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="ap_clk"/>
+        <spirit:internalPortReference spirit:componentRef="top_0" spirit:portRef="ap_clk"/>
+      </spirit:adHocConnection>
+      <spirit:adHocConnection>
+        <spirit:name>ap_rst_n_1</spirit:name>
+        <spirit:externalPortReference spirit:portRef="ap_rst_n"/>
+        <spirit:internalPortReference spirit:componentRef="top_0" spirit:portRef="ap_rst_n"/>
+      </spirit:adHocConnection>
+    </spirit:adHocConnections>
     <spirit:hierConnections>
       <spirit:hierConnection spirit:interfaceRef="stream_in/stream_in_1">
-        <spirit:activeInterface spirit:busRef="stream_out" spirit:componentRef="./stream_in_1"/>
+        <spirit:activeInterface spirit:busRef="stream_in" spirit:componentRef="top_0"/>
+      </spirit:hierConnection>
+      <spirit:hierConnection spirit:interfaceRef="stream_out/top_0_stream_out">
+        <spirit:activeInterface spirit:busRef="stream_out" spirit:componentRef="top_0"/>
       </spirit:hierConnection>
     </spirit:hierConnections>
   </spirit:design>
