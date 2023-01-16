@@ -1,3 +1,7 @@
+# **PROJECT MOVED**
+This project orignally hosted on https://github.com/tukl-msd/median.demonstrator has now moved an is no longer maintained in this location.
+Please go to https://gitlab.rhrk.uni-kl.de/EIT/ZynqVision/eit.zynqvision.main for the latest version.
+
 # Median filter demonstrator on ZynqBerry
 
 Please read this carefully before you clone this repository to save time and disk space.
